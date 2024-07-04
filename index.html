@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget App</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="sub-container">
+
+        <div class="total-amount-container">
+          <h3>預算</h3>
+          <input type="number" id="total-amount" placeholder="請輸入預算金額">
+          <p class="hide error" id="budget-error">
+            輸入錯誤，請填入正確數值
+          </p>
+          <button class="submit" id="total-amount-button">添加預算</button>
+        </div>
+
+        <div class="user-amount-container">
+          <h3>消費</h3>
+          <input type="text" class="product-title" id="product-title" placeholder="請輸入項目行稱">
+          <input type="number" id="user-amount" placeholder="請輸入金額">
+          <p class="hide error" id="product-title-error">
+            內容不得為空
+          </p>
+          <button class="submit" id="check-amount">金額無誤，確認送出</button>
+        </div>
+      </div>
+
+      <div class="output-container flex-space">
+        <div>
+          <p>總預算</p>
+          <span id="amount"> 0 </span>
+        </div>
+
+        <div>
+          <p>消費</p>
+          <span id="expenditure-value"> 0 </span>
+        </div>
+
+        <div>
+          <p>餘額</p>
+          <span id="balance-amount"> 0 </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      <h3>消費清單</h3>
+      <div class="list-container" id="list"></div>
+    </div>
+
+  </div>
+
+  <script src="./all.js"></script>
+</body>
+
+</html>
